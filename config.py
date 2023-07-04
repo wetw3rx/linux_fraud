@@ -243,7 +243,7 @@ def init_widgets_list():
                         icon_size = 14,
                         decorations = [
                             RectDecoration (
-                                colour = colors[6],
+                                colour = colors[5],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -262,7 +262,7 @@ def init_widgets_list():
                         fontsize = 13,
                         decorations = [
                             RectDecoration (
-                                colour = colors[9],
+                                colour = colors[4],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -283,7 +283,7 @@ def init_widgets_list():
                         fontsize = 14,
                         decorations = [
                             RectDecoration (
-                                colour = colors[3],
+                                colour = colors[6],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -304,7 +304,7 @@ def init_widgets_list():
                         fontsize = 14,
                         decorations = [
                             RectDecoration (
-                                colour = colors[5],
+                                colour = colors[0],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -333,7 +333,7 @@ def init_widgets_list():
                         format = "%H:%M",
                         decorations = [
                             RectDecoration (
-                                colour = colors[8],
+                                colour = colors[3],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -362,7 +362,7 @@ def init_widgets_list():
                         format="%m/%d/%y",
                         decorations = [
                             RectDecoration (
-                                colour = colors[7],
+                                colour = colors[8],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -372,7 +372,7 @@ def init_widgets_list():
                widget.Sep(
                         linewidth = 1,
                         padding = 10,
-                        foreground = colors[1],
+                        foreground = colors[2],
                         background = colors[1]
                         ),
                #Spotify(
@@ -384,16 +384,27 @@ def init_widgets_list():
                #     pause_icon = 'x',
                #     format = '{icon} {artist}: {track}'
                #       ),
-                widget.Sep(
-                        linewidth = 1,
-                        padding = 10,
-                        foreground = colors[2],
-                        background = colors[1]
-                        ),
                 widget.UPowerWidget(
                         border_colour = '#d8dee9',
                         border_critical_colour = '#bf616a'
                         ),
+                #widget.Battery(
+                #        charge_char = "charging:",
+                #        discharge_char = "batt:",
+                #        font = "Source Code Pro Bold",
+                #        fontsize = 13,
+                #        background = colors[1],
+                #        foreground = colors[1],
+                #        format = "{char} {percent:2.0%}",
+                #            decorations = [
+                #                RectDecoration(
+                #                    colour = colors[7],
+                #                    padding_y = 5,
+                #                    radius = 2,
+                #                    filled = True
+                #                    ),
+                #                ],
+                #        ),
                 widget.Systray(
                         background = colors[1],
                         icon_size = 20,
@@ -486,5 +497,6 @@ auto_fullscreen = True
 focus_on_window_activation = "focus" # or smart
 
 wmname = "LG3D"
+
 
 
