@@ -181,7 +181,7 @@ colors = init_colors()
 # WIDGETS FOR THE BAR
 
 def init_widgets_defaults():
-    return dict(font="Source Code Pro",
+    return dict(font="JetbrainsMono Nerd Font",
                 fontsize = 12,
                 padding = 2,
                 background=colors[1])
@@ -207,8 +207,8 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.GroupBox(font="Source Code Pro",
-                        fontsize = 15,
+               widget.GroupBox(font="JetbrainsMono Nerd Font Bold",
+                        fontsize = 14,
                         margin_y = 2,
                         margin_x = 3,
                         padding_y = 2,
@@ -229,46 +229,31 @@ def init_widgets_list():
                         background = colors[1],
                         foreground = colors[2],
                         ),
-               widget.WindowName(font="Source Code Pro Bold",
+               widget.WindowName(font="JetbrainsMono Nerd Font Bold",
                         fontsize = 14,
-                        foreground = colors[0],
+                        foreground = colors[7],
                         background = colors[1],
                         ),
-               widget.Pomodoro(
-                        background = colors[1],
-                        color_active = colors[1],
-                        color_break = colors[1],
-                        color_inactive = colors[1],
-                        font = 'Source Code Pro Bold',
-                        icon_size = 14,
-                        decorations = [
-                            RectDecoration (
-                                colour = colors[5],
-                                padding_y = 5,
-                                radius = 2,
-                                filled = True
-                            ),
-                        ], ),
                widget.Sep(
                         foreground = colors[1],
                         background = colors[1],
                         padding = 10,
                         linewidth = 1
                         ),
-               widget.CPU(
-                        background = colors[1],
-                        foreground = colors[1],
-                        font = "Source Code Pro Bold",
-                        fontsize = 13,
-                        decorations = [
-                            RectDecoration (
-                                colour = colors[4],
-                                padding_y = 5,
-                                radius = 2,
-                                filled = True
-                            ),
-                        ],
-                        ),
+               #widget.CPU(
+               #         background = colors[1],
+               #         foreground = colors[1],
+               #         font = "JetbrainsMono Nerd Font Bold",
+               #         fontsize = 13,
+               #         decorations = [
+               #             RectDecoration (
+               #                 colour = colors[4],
+               #                 padding_y = 5,
+               #                 radius = 2,
+               #                 filled = True
+               #             ),
+               #         ],
+               #         ),
                widget.Sep(
                         linewidth = 1,
                         padding = 10,
@@ -279,11 +264,11 @@ def init_widgets_list():
                         measure_mem = 'G',
                         foreground = colors[1],
                         background = colors[1],
-                        font = "Source Code Pro Bold",
-                        fontsize = 14,
+                        font = "JetbrainsMono Nerd Font Bold",
+                        fontsize = 13,
                         decorations = [
                             RectDecoration (
-                                colour = colors[6],
+                                colour = colors[7],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -300,11 +285,11 @@ def init_widgets_list():
                         visible_on_warn = False,
                         background = colors[1],
                         foreground = colors[1],
-                        font = "Source Code Pro Bold",
-                        fontsize = 14,
+                        font = "JetbrainsMono Nerd Font Bold",
+                        fontsize = 13,
                         decorations = [
                             RectDecoration (
-                                colour = colors[0],
+                                colour = colors[7],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -325,27 +310,6 @@ def init_widgets_list():
                #         padding = 0,
                #         fontsize=18,
                #         ),
-               widget.Clock(
-                        foreground = colors[1],
-                        background = colors[1],
-                        font = "Source Code Pro Bold",
-                        fontsize = 14,
-                        format = "%H:%M",
-                        decorations = [
-                            RectDecoration (
-                                colour = colors[3],
-                                padding_y = 5,
-                                radius = 2,
-                                filled = True
-                            ),
-                        ],
-                        ),
-               widget.Sep(
-                        linewidth = 1,
-                        padding = 10,
-                        foreground = colors[1],
-                        background = colors[1]
-                        ),
                #widget.TextBox(
                #         font="FontAwesome",
                #         text="  ",
@@ -357,12 +321,54 @@ def init_widgets_list():
                widget.Clock(
                         foreground = colors[1],
                         background = colors[1],
-                        fontsize = 14,
                         font = "Source Code Pro Bold",
+                        fontsize = 14,
+                        format = "%H:%M",
+                        decorations = [
+                            RectDecoration (
+                                colour = colors[7],
+                                padding_y = 5,
+                                radius = 2,
+                                filled = True
+                            ),
+                        ],
+                        ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[1],
+                        background = colors[1]
+               ),
+               widget.Clock(
+                        foreground = colors[1],
+                        background = colors[1],
+                        fontsize = 13,
+                        font = "JetbrainsMono Nerd Font Bold",
                         format="%m/%d/%y",
                         decorations = [
                             RectDecoration (
-                                colour = colors[8],
+                                colour = colors[7],
+                                padding_y = 5,
+                                radius = 2,
+                                filled = True
+                            ),
+                        ],),
+                   widget.Sep(
+                            linewidth = 1,
+                            padding = 10,
+                            foreground = colors[1],
+                            background = colors[1]
+                            ),
+               widget.OpenWeather(
+                        app_key = "4cf3731a25d1d1f4e4a00207afd451a2",
+                        cityid = "4997193",
+                        format = '{icon} {main_temp}°',
+                        metric = False,
+                        font = "JetBrainsMono Nerd Font Bold",
+                        foreground = colors[1],
+                        decorations = [
+                            RectDecoration (
+                                colour = colors[7],
                                 padding_y = 5,
                                 radius = 2,
                                 filled = True
@@ -374,7 +380,7 @@ def init_widgets_list():
                         padding = 10,
                         foreground = colors[2],
                         background = colors[1]
-                        ),
+               ),
                #Spotify(
                #     foreground = colors[3],
                #     background = colors[1],
@@ -497,6 +503,7 @@ auto_fullscreen = True
 focus_on_window_activation = "focus" # or smart
 
 wmname = "LG3D"
+
 
 
 
